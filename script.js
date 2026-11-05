@@ -1,0 +1,8 @@
+const date=document.querySelector('input[type="date"]');if(date&&!date.value)date.value=new Date().toISOString().slice(0,10);
+const normalize=value=>value.trim().toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+
+document.querySelectorAll('.reveal-button').forEach(button=>button.addEventListener('click',()=>{const target=document.getElementById(button.dataset.target);const visible=target.classList.toggle('visible');button.textContent=visible?'Ocultar respuestas sugeridas':'Ver respuestas sugeridas'}));
+
+document.querySelector('#check-fill').addEventListener('click',()=>{const fields=[...document.querySelectorAll('[data-answer]')];let total=0;fields.forEach(field=>{const correct=normalize(field.value)===normalize(field.dataset.answer);field.classList.toggle('correct',correct);field.classList.toggle('wrong',!correct);if(correct)total++});document.querySelector('#fill-score').textContent=`${total} de ${fields.length} respuestas correctas.${total===fields.length?' ¡Excelente!':' Revisa los campos marcados en rojo.'}`});
+
+const form=document.querySelector('#lesson-form');form.addEventListener('submit',async event=>{event.preventDefault();const status=document.querySelector('#form-status');status.className='';status.textContent='Enviando actividad...';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form)});const data=await response.json();if(!data.success)throw new Error();status.className='form-success';status.textContent='¡Actividad enviada correctamente!'}catch(error){status.className='form-error';status.textContent='No fue posible enviar ahora. Comprueba tu conexión e inténtalo de nuevo.'}});

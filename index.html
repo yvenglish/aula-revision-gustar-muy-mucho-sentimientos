@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#210E16">
+  <title>Un día lleno de emociones | YV Español</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#inicio"><img src="assets/logobranca.png" alt="YV Español"></a>
+    <nav><a href="#sentimientos">Sentimientos</a><a href="#gustar">Gustar</a><a href="#muy-mucho">Muy × mucho</a><a href="#produccion">Escritura</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <span class="eyebrow">YV ESPAÑOL · REPASO Y PRODUCCIÓN</span>
+        <h1>Un día lleno de <em>emociones</em></h1>
+        <p>Sentimientos, gustos e intensidad: hoy vas a transformar lo que ya entiendes en español escrito.</p>
+        <a class="button" href="#calentamiento">Empezar a escribir <span>↓</span></a>
+      </div>
+      <aside><span>OBJETIVO</span><strong>ESCRIBIR</strong><p>GUSTAR · MUY · MUCHO</p></aside>
+    </section>
+
+    <form id="lesson-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1027624e-f586-43ab-bb7e-22c0f93222a0">
+      <input type="hidden" name="subject" value="YV Español — Repaso de gustar, muy/mucho y sentimientos">
+      <input type="hidden" name="from_name" value="YV Español">
+
+      <section class="student">
+        <label>Nombre del alumno<input type="text" name="nombre" placeholder="Escribe tu nombre" required></label>
+        <label>Fecha<input type="date" name="fecha" required></label>
+      </section>
+
+      <section class="section" id="calentamiento">
+        <div class="heading"><span>01 · CALENTAMIENTO</span><h2>¿Cómo estás hoy?</h2><p>Responde con frases completas. No escribas solamente el nombre de un sentimiento.</p></div>
+        <div class="writing-card question-list">
+          <label>1. ¿Cómo estás hoy?<textarea name="calentamiento_1" rows="3"></textarea></label>
+          <label>2. ¿Por qué te sientes así?<textarea name="calentamiento_2" rows="3"></textarea></label>
+          <label>3. ¿Cómo estabas ayer?<textarea name="calentamiento_3" rows="3"></textarea></label>
+          <label>4. ¿Cómo crees que estarás mañana?<textarea name="calentamiento_4" rows="3"></textarea></label>
+        </div>
+      </section>
+
+      <section class="section feelings-section" id="sentimientos">
+        <div class="heading"><span>02 · SENTIMIENTOS</span><h2>Explica la emoción</h2><p>Elige un sentimiento adecuado y completa la explicación.</p></div>
+        <div class="word-bank" aria-label="Banco de sentimientos"><span>feliz</span><span>triste</span><span>cansado/a</span><span>preocupado/a</span><span>nervioso/a</span><span>enfadado/a</span><span>emocionado/a</span><span>aburrido/a</span><span>tranquilo/a</span><span>sorprendido/a</span></div>
+        <div class="situation-list">
+          <label><b>1.</b> Mañana tengo una entrevista de trabajo. Estoy <input name="sentimiento_1" placeholder="sentimiento"> porque…<textarea name="explicacion_1" rows="2"></textarea></label>
+          <label><b>2.</b> Hoy he recibido una buena noticia. Estoy <input name="sentimiento_2" placeholder="sentimiento"> porque…<textarea name="explicacion_2" rows="2"></textarea></label>
+          <label><b>3.</b> He trabajado durante todo el día. Estoy <input name="sentimiento_3" placeholder="sentimiento"> porque…<textarea name="explicacion_3" rows="2"></textarea></label>
+          <label><b>4.</b> Mi amigo no responde a mis mensajes. Estoy <input name="sentimiento_4" placeholder="sentimiento"> porque…<textarea name="explicacion_4" rows="2"></textarea></label>
+          <label><b>5.</b> No tengo nada que hacer esta tarde. Estoy <input name="sentimiento_5" placeholder="sentimiento"> porque…<textarea name="explicacion_5" rows="2"></textarea></label>
+        </div>
+      </section>
+
+      <section class="section grammar-card" id="gustar">
+        <div class="heading dark"><span>03 · GUSTAR</span><h2>Traduce y personaliza</h2><p>Recuerda: <strong>gusta</strong> acompaña a una cosa singular o una acción; <strong>gustan</strong>, a cosas plurales.</p></div>
+        <div class="rule-pills"><span>Me gusta la casa.</span><span>Me gusta viajar.</span><span>Me gustan los misterios.</span></div>
+
+        <article class="activity">
+          <div class="activity-header"><span>03A</span><h3>Traduce al español</h3></div>
+          <div class="question-list light-list">
+            <label>1. Eu gosto de filmes de mistério.<textarea name="traduccion_1" rows="2"></textarea></label>
+            <label>2. Minha irmã gosta de roupas coloridas.<textarea name="traduccion_2" rows="2"></textarea></label>
+            <label>3. Nós não gostamos de acordar cedo.<textarea name="traduccion_3" rows="2"></textarea></label>
+            <label>4. Mateo gosta da casa, mas não gosta do jardim.<textarea name="traduccion_4" rows="2"></textarea></label>
+            <label>5. Você gosta de histórias de agentes secretos?<textarea name="traduccion_5" rows="2"></textarea></label>
+            <label>6. Os meus amigos gostam de viajar e conhecer lugares diferentes.<textarea name="traduccion_6" rows="2"></textarea></label>
+          </div>
+          <button type="button" class="reveal-button" data-target="translation-key">Ver respuestas sugeridas</button>
+          <div class="answer-key" id="translation-key"><ol><li>Me gustan las películas de misterio.</li><li>A mi hermana le gusta la ropa de colores.</li><li>No nos gusta despertarnos temprano.</li><li>A Mateo le gusta la casa, pero no le gusta el jardín.</li><li>¿Te gustan las historias de agentes secretos?</li><li>A mis amigos les gusta viajar y conocer lugares diferentes.</li></ol></div>
+        </article>
+
+        <article class="activity personal-writing">
+          <div class="activity-header"><span>03B</span><h3>Ahora habla de personas reales</h3></div>
+          <p>Escribe seis frases completas:</p>
+          <ul><li>dos cosas que te gustan;</li><li>dos cosas que no te gustan;</li><li>una actividad que le gusta a alguien de tu familia;</li><li>cosas que les gustan a tus amigos.</li></ul>
+          <div class="sentence-starters"><span>Me gusta…</span><span>Me gustan…</span><span>No me gusta…</span><span>No me gustan…</span><span>A mi… le gusta…</span><span>A mis amigos les gusta(n)…</span></div>
+          <div class="numbered-writing">
+            <label><span>1</span><textarea name="gustar_personal_1" rows="2"></textarea></label><label><span>2</span><textarea name="gustar_personal_2" rows="2"></textarea></label><label><span>3</span><textarea name="gustar_personal_3" rows="2"></textarea></label><label><span>4</span><textarea name="gustar_personal_4" rows="2"></textarea></label><label><span>5</span><textarea name="gustar_personal_5" rows="2"></textarea></label><label><span>6</span><textarea name="gustar_personal_6" rows="2"></textarea></label>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="muy-mucho">
+        <div class="heading"><span>04 · MUY × MUCHO</span><h2>Intensidad o cantidad</h2><p>Completa y comprueba tus respuestas.</p></div>
+        <div class="mini-rules"><article><strong>MUY</strong><p>Antes de un adjetivo o adverbio.</p><em>Estoy muy cansado.</em></article><article><strong>MUCHO/A/OS/AS</strong><p>Antes de un sustantivo.</p><em>Tengo muchas preguntas.</em></article><article><strong>MUCHO</strong><p>Después de un verbo.</p><em>Trabajo mucho.</em></article></div>
+        <div class="fill-list">
+          <label><span>1. Hoy estoy</span><input data-answer="muy" name="muy_mucho_1"><span>cansado.</span></label>
+          <label><span>2. Tengo</span><input data-answer="mucho" name="muy_mucho_2"><span>trabajo esta semana.</span></label>
+          <label><span>3. A Camila le gustan</span><input data-answer="mucho" name="muy_mucho_3"><span>las casas antiguas.</span></label>
+          <label><span>4. Valeria estaba</span><input data-answer="muy" name="muy_mucho_4"><span>nerviosa durante la cena.</span></label>
+          <label><span>5. Hay</span><input data-answer="muchos" name="muy_mucho_5"><span>documentos dentro de la caja.</span></label>
+          <label><span>6. La policía tiene</span><input data-answer="mucha" name="muy_mucho_6"><span>información sobre el caso.</span></label>
+          <label><span>7. Viktor habla</span><input data-answer="mucho" name="muy_mucho_7"><span>, pero explica muy poco.</span></label>
+          <label><span>8. Los agentes están</span><input data-answer="muy" name="muy_mucho_8"><span>preocupados.</span></label>
+          <label><span>9. Tengo</span><input data-answer="muchas" name="muy_mucho_9"><span>preguntas sobre la historia.</span></label>
+          <label><span>10. Esta misión es</span><input data-answer="muy" name="muy_mucho_10"><span>peligrosa.</span></label>
+        </div>
+        <button type="button" class="button check" id="check-fill">Comprobar respuestas</button><p class="score" id="fill-score" aria-live="polite"></p>
+      </section>
+
+      <section class="section correction-section">
+        <div class="heading"><span>05 · CORRECCIÓN</span><h2>Encuentra el error</h2><p>Cada frase contiene un error. Reescríbela correctamente.</p></div>
+        <div class="correction-grid">
+          <label><b>1.</b> Me gusta los coches antiguos.<textarea name="correccion_1" rows="2"></textarea></label>
+          <label><b>2.</b> Estoy mucho preocupado por mi amigo.<textarea name="correccion_2" rows="2"></textarea></label>
+          <label><b>3.</b> A Camila le gustan viajar.<textarea name="correccion_3" rows="2"></textarea></label>
+          <label><b>4.</b> Tengo muy preguntas sobre la misión.<textarea name="correccion_4" rows="2"></textarea></label>
+          <label><b>5.</b> Mis amigos le gusta las películas de misterio.<textarea name="correccion_5" rows="2"></textarea></label>
+          <label><b>6.</b> Valeria estaba mucha nerviosa.<textarea name="correccion_6" rows="2"></textarea></label>
+        </div>
+        <button type="button" class="reveal-button dark-button" data-target="correction-key">Ver respuestas sugeridas</button>
+        <div class="answer-key dark-key" id="correction-key"><ol><li>Me gustan los coches antiguos.</li><li>Estoy muy preocupado por mi amigo.</li><li>A Camila le gusta viajar.</li><li>Tengo muchas preguntas sobre la misión.</li><li>A mis amigos les gustan las películas de misterio.</li><li>Valeria estaba muy nerviosa.</li></ol></div>
+      </section>
+
+      <section class="section final-writing" id="produccion">
+        <div class="heading dark"><span>06 · PRODUCCIÓN FINAL</span><h2>Un día lleno de emociones</h2><p>Escribe un texto sobre un día real o imaginario que haya provocado diferentes emociones.</p></div>
+        <div class="requirements"><h3>Incluye en tu texto</h3><ul><li>al menos cuatro sentimientos;</li><li>dos frases con <strong>gusta</strong> o <strong>gustan</strong>;</li><li>tres usos de <strong>muy</strong>;</li><li>tres formas de <strong>mucho, mucha, muchos</strong> o <strong>muchas</strong>;</li><li>una explicación para cada sentimiento.</li></ul></div>
+        <details class="guide"><summary>Preguntas para orientar el texto</summary><ol><li>¿Dónde estabas?</li><li>¿Qué ocurrió?</li><li>¿Quién estaba contigo?</li><li>¿Cómo te sentiste al principio?</li><li>¿Cómo cambiaron tus sentimientos?</li><li>¿Qué te gustó y qué no te gustó?</li><li>¿Cómo terminó el día?</li></ol></details>
+        <label class="big-writing-label">Escribe aquí<textarea name="produccion_final" rows="15" placeholder="Empieza tu historia…"></textarea></label>
+        <div class="checklist"><h3>Revisión final</h3><label><input type="checkbox" name="revision_frases"> Utilicé frases completas.</label><label><input type="checkbox" name="revision_gusta"> Usé <b>gusta</b> con singular o con una acción.</label><label><input type="checkbox" name="revision_gustan"> Usé <b>gustan</b> con sustantivos plurales.</label><label><input type="checkbox" name="revision_muy"> Usé <b>muy</b> antes de adjetivos.</label><label><input type="checkbox" name="revision_mucho"> Hice la concordancia de <b>mucho/a/os/as</b>.</label><label><input type="checkbox" name="revision_emociones"> Expliqué por qué sentí cada emoción.</label></div>
+      </section>
+
+      <section class="section submit-section"><button class="submit" type="submit">Enviar actividad <span>→</span></button><p id="form-status" aria-live="polite"></p></section>
+    </form>
+  </main>
+
+  <footer><img src="assets/logobranca.png" alt="YV Español"><p>From understanding to speaking.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
